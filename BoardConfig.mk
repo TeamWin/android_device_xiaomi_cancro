@@ -123,7 +123,6 @@ TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
 RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
 TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
-TW_NO_SCREEN_BLANK                      := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
 RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
