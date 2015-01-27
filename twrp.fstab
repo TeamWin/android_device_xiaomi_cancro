@@ -17,4 +17,4 @@
 /system1      ext4    /dev/block/platform/msm_sdcc.1/by-name/system1    flags=display="System 2";
 /cache        ext4    /dev/block/platform/msm_sdcc.1/by-name/cache
 /data         ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata   length=-16384
-/usbotg       vfat    /devices/platform/xhci-hcd                        flags=display="USB-OTG";storage;wipeingui;removable
+/usbotg       vfat    /dev/block/platform/xhci-hcd/by-num/p1            flags=display="USB-OTG";storage;wipeingui;removable

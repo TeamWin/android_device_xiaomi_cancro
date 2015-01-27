@@ -124,10 +124,11 @@ RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
 TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
+TW_INCLUDE_CRYPTO                       := true
 RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
 BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := \"/sys/class/leds/lcd-backlight/brightness\"
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
 
 # USE_CHINESE_RECOVERY := false
 # ifneq ($(USE_CHINESE_RECOVERY),true)
