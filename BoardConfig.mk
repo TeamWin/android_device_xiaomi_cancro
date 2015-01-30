@@ -124,10 +124,16 @@ RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
 TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
-RECOVERY_FSTAB_VERSION                  := 1
+RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
 BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
+TW_INCLUDE_L_CRYPTO                     := true
+TW_NO_SCREEN_TIMEOUT                    := true
+TW_NO_SCREEN_BLANK                      := true
+TARGET_RECOVERY_QCOM_RTC_FIX            := true
+BOARD_SUPPRESS_SECURE_ERASE             := true
+BOARD_SUPPRESS_EMMC_WIPE                := true
 
 # USE_CHINESE_RECOVERY := false
 # ifneq ($(USE_CHINESE_RECOVERY),true)
