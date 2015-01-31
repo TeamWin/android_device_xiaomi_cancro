@@ -122,7 +122,8 @@ BOARD_HAS_NO_REAL_SDCARD                := true
 TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
 RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
-TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
+# TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
+TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/rootdir/etc/fstab.qcom
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
 RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
@@ -174,7 +175,7 @@ EXTENDED_FONT_FOOTPRINT := true
 # Disable Block Based OTA
 BLOCK_BASED_OTA := false
 
-WITH_DEXPREOPT := true
+# WITH_DEXPREOPT := true
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
