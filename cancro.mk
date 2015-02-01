@@ -33,6 +33,7 @@ DEVICE_PACKAGE_OVERLAYS += device/xiaomi/cancro/overlay
 
 # Config scripts
 PRODUCT_PACKAGES += \
+  init.qcom.sh \
   init.qcom.bt.sh \
   init.qcom.fm.sh \
   init.qcom.modem_links.sh \
@@ -307,7 +308,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # strict operation
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.strict_op_enable=false
-    
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
