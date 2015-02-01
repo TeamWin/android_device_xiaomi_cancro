@@ -44,7 +44,7 @@
 /dev/ccid_bridge          0660   system     system
 /dev/tspdrv               0660   system     system
 
-#permissions for CSVT
+# permissions for CSVT
 /dev/smd11                0660   radio      radio
 
 /dev/radio0               0640   system     system
@@ -118,7 +118,7 @@
 /dev/msm_rotator          0660   system     system
 /dev/hw_random            0660   system     system
 
-#permissions for audio
+# permissions for audio
 /dev/msm_qcelp            0660   system     audio
 /dev/msm_evrc             0660   system     audio
 /dev/msm_wma              0660   system     audio
@@ -178,7 +178,8 @@
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
-#nfc permissions
+
+# nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
 
 # UIO devices

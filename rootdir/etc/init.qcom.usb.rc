@@ -454,7 +454,7 @@ on property:sys.usb.config=rndis,none
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/idProduct 0380
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions rndis
     write /sys/class/android_usb/android0/enable 1
     start mdbd
@@ -468,7 +468,7 @@ on property:sys.usb.config=rndis,none,adb
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/idProduct 0388
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions rndis,adb
     write /sys/class/android_usb/android0/enable 1
     start mdbd
@@ -537,7 +537,7 @@ on property:sys.usb.config=ptp
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/idProduct 0310
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions ptp
     write /sys/class/android_usb/android0/enable 1
     start mdbd
@@ -548,7 +548,7 @@ on property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/idProduct 0318
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions ptp,adb
     write /sys/class/android_usb/android0/enable 1
     start mdbd
@@ -560,9 +560,11 @@ on property:sys.usb.config=mtp
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/idProduct 0360
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions mtp,mass_storage
     write /sys/class/android_usb/android0/enable 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/ro 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/file /data/miui/cdrom_install.iso
     start mdbd
     setprop sys.usb.state ${sys.usb.config}
 
@@ -571,9 +573,11 @@ on property:sys.usb.config=mtp,adb
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/idProduct 0368
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions mtp,mass_storage,adb
     write /sys/class/android_usb/android0/enable 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/ro 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/file /data/miui/cdrom_install.iso
     start mdbd
     start adbd
     setprop sys.usb.state ${sys.usb.config}
@@ -659,7 +663,7 @@ on property:sys.usb.config=mass_storage,adb
     write /sys/class/android_usb/android0/idVendor 05C6
     write /sys/class/android_usb/android0/idProduct 9015
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/functions adb,mass_storage
     write /sys/class/android_usb/android0/enable 1
     start adbd
@@ -670,7 +674,7 @@ on property:sys.usb.config=mass_storage
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 2717
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.real_model}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/idProduct F000
     write /sys/class/android_usb/android0/functions mass_storage
     write /sys/class/android_usb/android0/enable 1
