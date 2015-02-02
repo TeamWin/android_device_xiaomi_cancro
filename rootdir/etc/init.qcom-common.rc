@@ -667,13 +667,13 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     disabled
     oneshot
 
-service qlogd /system/xbin/qlogd
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
+# service qlogd /system/xbin/qlogd
+#     class main
+#     disabled
+# on property:persist.sys.qlogd=1
+#     start qlogd
+# on property:persist.sys.qlogd=0
+#     stop qlogd
 
 service ssr_diag /system/bin/ssr_diag
     class late_start

@@ -37,6 +37,7 @@ ro.qcom.ad.calib.data=/data/calib.cfg
 
 # Force camera API version 1
 camera2.portability.force_api=1
+
 # qualcomm sensors enable 
 ro.qti.sensors.max_geomag_rotv=60
 ro.qti.sensors.max_gyro_rate=200
@@ -52,7 +53,9 @@ ro.qti.sensors.georv=true
 ro.qti.sensors.smgr_mag_cal_en=true
 ro.qti.sensors.step_detector=true
 ro.qti.sensors.step_counter=true
-persist.debug.sensors.hal=1
-debug.qualcomm.sns.daemon=1
-debug.qualcomm.sns.libsensor1=1
+
+# persist.debug.sensors.hal=w
+debug.qualcomm.sns.hal=w
+debug.qualcomm.sns.daemon=w
+debug.qualcomm.sns.libsensor1=w
 
