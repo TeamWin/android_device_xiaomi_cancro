@@ -147,13 +147,13 @@
 /dev/smd2                 0660   bluetooth  net_bt_stack
 /dev/ttyHSL1              0660   system     system
 /dev/mdm                  0660   system     radio
-/sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
-/dev/i2c-5                0660   media       media
+/dev/i2c-5                0660   media      media
 /dev/voice_svc            0660   system     audio
 /dev/lirc*                0660   system     system
+/sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
@@ -165,15 +165,15 @@
 /dev/tsc_ci0              0660   media       media
 
 # sensors
-/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
-/sys/devices/f9925000.i2c/i2c-0/0-* enable          0660     input     system
-/sys/devices/f9925000.i2c/i2c-0/0-* poll_delay      0660     input     system
-/sys/devices/virtual/optical_sensors/proximity      ps_adc         0660    input    system
-/sys/devices/virtual/optical_sensors/proximity      ps_poll_delay  0660    input    system
-/sys/devices/virtual/optical_sensors/lightsensor    ls_auto        0660    input    system
-/sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay  0660    input    system
-/sys/devices/virtual/input/input*                   poll           0660    input    system
-/sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
+/sys/devices/i2c-12/12-*                            pollrate_ms     0664  system  system
+/sys/devices/f9925000.i2c/i2c-0/0-*                 enable          0660  input   system
+/sys/devices/f9925000.i2c/i2c-0/0-*                 poll_delay      0660  input   system
+/sys/devices/virtual/optical_sensors/proximity      ps_adc          0660  input   system
+/sys/devices/virtual/optical_sensors/proximity      ps_poll_delay   0660  input   system
+/sys/devices/virtual/optical_sensors/lightsensor    ls_auto         0660  input   system
+/sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay   0660  input   system
+/sys/devices/virtual/input/input*                   poll            0660  input   system
+/sys/devices/virtual/input/input*                   pollrate_ms     0660  input   system
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
@@ -188,7 +188,7 @@
 /dev/uio2                 0660   system     system
 
 # sensor hub
-/dev/iio:device*        0660    system  system
+/dev/iio:device*                                                                                                                        0660    system  system
 /sys/devices/f9968000.i2c/i2c-12/12-0042/0018:0483:5702.0001/HID-SENSOR-200031.6/iio:device*    buffer/enable                           0660    system  system
 /sys/devices/f9968000.i2c/i2c-12/12-0042/0018:0483:5702.0001/HID-SENSOR-200031.6/iio:device*    buffer/length                           0660    system  system
 /sys/devices/f9968000.i2c/i2c-12/12-0042/0018:0483:5702.0001/HID-SENSOR-200031.6/iio:device*    dev                                     0440    system  system
