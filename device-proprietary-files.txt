@@ -300,8 +300,9 @@ etc/firmware/Signedrompatch_v24.bin
 bin/qseecomd
 etc/permissions/com.google.widevine.software.drm.xml
 framework/com.google.widevine.software.drm.jar
-lib/libQSEEComAPI.so:vendor/lib/libQSEEComAPI.so
+lib/libQSEEComAPI.so
 lib/libdrmdecrypt.so
+vendor/lib/libQSEEComAPI.so
 vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -314,7 +315,7 @@ vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
+priv-app/com.qualcomm.location/com.qualcomm.location.apk
 bin/loc_launcher
 bin/location-mq
 bin/lowi-server
@@ -375,7 +376,7 @@ etc/firmware/a330_pfp.fw
 etc/firmware/a330_pm4.fw
 
 # Media
--vendor/lib/libHevcSwDecoder.so
+vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
 vendor/lib/libmmparser.so
@@ -395,10 +396,9 @@ lib/libOmxQcelp13Enc.so
 lib/libOmxVdecHevc.so
 
 # Postprocessing
-#-app/PPPreference.apk
 bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
--vendor/lib/libmm-abl.so
+vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
 
 # Qualcomm framework
@@ -424,8 +424,8 @@ vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
 
 # Radio
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--app/shutdownlistener/shutdownlistener.apk
+app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
@@ -467,22 +467,23 @@ vendor/lib/libthermalioctl.so
 
 # Time services
 bin/time_daemon
--vendor/lib/libtime_genoff.so
--vendor/lib/libTimeService.so
--app/TimeService/TimeService.apk
+vendor/lib/libtime_genoff.so
+vendor/lib/libTimeService.so
+app/TimeService/TimeService.apk
 
 # Listen service
-#vendor/lib/liblistenhardware.so
-#vendor/lib/liblistenjni.so
-#-vendor/lib/liblisten.so
-#vendor/lib/liblistensoundmodel.so
+# vendor/lib/liblistenhardware.so
+# vendor/lib/liblistenjni.so
+# vendor/lib/liblisten.so
+# vendor/lib/liblistensoundmodel.so
 
 # Fastcharge
 bin/hvdcp
 
-#lib/hw/lights.msm8974.so
+# Lights
+# lib/hw/lights.msm8974.so
 
-#NFC
+# NFC
 lib/hw/nfc_nci_nfca.default.so
 vendor/firmware/BCM20791B5_002.006.013.0011.0087_Generic_I2C_NCD_Unsigned_configdata.ncd
 vendor/firmware/BCM20791B5_002.006.013.0011.0087_Generic_PreI2C_NCD_Unsigned_configdata.ncd
@@ -513,7 +514,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/liblistensoundmodel.so
 
 # QuickBoot
--app/QuickBoot/QuickBoot.apk
+app/QuickBoot/QuickBoot.apk
 
 # WiFi
 lib/libwcnss_qmi.so
