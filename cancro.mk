@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 endif
+
 # Common QCOM configuration tools
 $(call inherit-product, device/qcom/common/Android.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -33,36 +34,36 @@ DEVICE_PACKAGE_OVERLAYS += device/xiaomi/cancro/overlay
 
 # Config scripts
 PRODUCT_PACKAGES += \
-  init.qcom.sh \
-  init.qcom.bt.sh \
-  init.qcom.fm.sh \
-  init.qcom.modem_links.sh \
-  init.qcom.post_boot.sh \
-  init.qcom.audio.sh \
-  init.qcom.wifi.sh \
-  hsic.control.bt.sh \
-  qca6234-service.sh \
-  usf_post_boot.sh 
+    init.qcom.sh \
+    init.qcom.bt.sh \
+    init.qcom.fm.sh \
+    init.qcom.modem_links.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.audio.sh \
+    init.qcom.wifi.sh \
+    hsic.control.bt.sh \
+    qca6234-service.sh \
+    usf_post_boot.sh 
   
 # Ramdisk
 PRODUCT_PACKAGES += \
-  fstab.qcom \
-  init.qcom.rc \
-  init.qcom.usb.rc \
-  init.target.rc \
-  ueventd.qcom.rc
+    fstab.qcom \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.target.rc \
+    ueventd.qcom.rc
 
 # Init configs
 PRODUCT_PACKAGES += \
-   init.class_main.sh \
-   init.mdm.sh \
-   init.qcom.class_core.sh \
-   init.qcom.early_boot.sh \
-   init.qcom.factory.sh \
-   init.qcom.sh \
-   init.qcom.ssr.sh \
-   init.qcom.syspart_fixup.sh \
-   init.qcom.usb.sh 
+    init.class_main.sh \
+    init.mdm.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.factory.sh \
+    init.qcom.sh \
+    init.qcom.ssr.sh \
+    init.qcom.syspart_fixup.sh \
+    init.qcom.usb.sh 
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -110,7 +111,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     use.dedicated.device.for.voip=false \
     audio.offload.pcm.enable=false
 
-#Enable more sensor
+# Enable more sensor
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.sensors.qmd=true \
     ro.qualcomm.sensors.smd=true \

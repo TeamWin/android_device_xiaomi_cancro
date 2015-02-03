@@ -4,6 +4,7 @@ bin/mm-qcamera-daemon
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
+vendor/lib/libubifocus.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera2_c2d_module.so
@@ -78,6 +79,7 @@ vendor/lib/libchromatix_imx214_snapshot.so
 vendor/lib/libchromatix_imx214_snapshot_hdr.so
 vendor/lib/libchromatix_imx214_video_binning.so
 vendor/lib/libchromatix_imx214_video_cmcc.so
+vendor/lib/libchromatix_imx214_snapshot.so
 vendor/lib/libchromatix_imx214_video_hdr.so
 vendor/lib/libchromatix_imx214_video_hdr_uhd.so
 vendor/lib/libchromatix_imx214_video_uhd.so
@@ -518,3 +520,7 @@ app/QuickBoot/QuickBoot.apk
 
 # WiFi
 lib/libwcnss_qmi.so
+
+# FM
+bin/fmconfig
+bin/fm_qsoc_patches

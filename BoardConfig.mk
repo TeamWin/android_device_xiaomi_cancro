@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,66 +13,67 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-BOARD_VENDOR := xiaomi
-TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/cancro
+
+BOARD_VENDOR 										:= xiaomi
+TARGET_RELEASETOOLS_EXTENSIONS 	:= device/xiaomi/cancro
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/cancro/include
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
+TARGET_BOOTLOADER_BOARD_NAME  := MSM8974
+TARGET_NO_BOOTLOADER          := true
+TARGET_NO_RADIOIMAGE          := true
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8974
+TARGET_BOARD_PLATFORM     := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
 # Architecture
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-TARGET_CPU_VARIANT := krait
+TARGET_ARCH                         := arm
+TARGET_ARCH_VARIANT                 := armv7-a-neon
+TARGET_CPU_ABI                      := armeabi-v7a
+TARGET_CPU_ABI2                     := armeabi
+TARGET_CPU_SMP                      := true
+TARGET_CPU_VARIANT                  := krait
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/xiaomi/cancro/kernel
-BOARD_KERNEL_CMDLINE := ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x37 ehci-hcd.park=3  androidboot.selinux=permissive androidboot.bootdevice=msm_sdcc.1
+TARGET_PREBUILT_KERNEL    := device/xiaomi/cancro/kernel
+BOARD_KERNEL_CMDLINE      := ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x37 ehci-hcd.park=3  androidboot.selinux=permissive androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_KERNEL_BASE        := 0x00000000
-BOARD_KERNEL_PAGESIZE    := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x0100
+BOARD_KERNEL_BASE         := 0x00000000
+BOARD_KERNEL_PAGESIZE     := 2048
+BOARD_MKBOOTIMG_ARGS      := --ramdisk_offset 0x02000000 --tags_offset 0x0100
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
 # Audio
-BOARD_USES_ALSA_AUDIO := true
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
+BOARD_USES_ALSA_AUDIO                       := true
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS  := true
+AUDIO_FEATURE_ENABLED_HWDEP_CAL             := true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
+BOARD_HAVE_BLUETOOTH                        := true
+BOARD_HAVE_BLUETOOTH_QCOM                   := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/cancro/bluetooth
-QCOM_BT_USE_SMD_TTY := true
-BLUETOOTH_HCI_USE_MCT := true
+QCOM_BT_USE_SMD_TTY                         := true
+BLUETOOTH_HCI_USE_MCT                       := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Graphics
-BOARD_EGL_CFG := device/xiaomi/cancro/configs/egl.cfg
-USE_OPENGL_RENDERER := true
-TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
-TARGET_USE_ION_COMPAT := true
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-HAVE_ADRENO_SOURCE:= false
-VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
+BOARD_EGL_CFG                   := device/xiaomi/cancro/configs/egl.cfg
+USE_OPENGL_RENDERER             := true
+TARGET_USES_C2D_COMPOSITION     := true
+TARGET_USES_ION                 := true
+TARGET_USE_ION_COMPAT           := true
+OVERRIDE_RS_DRIVER              := libRSDriver_adreno.so
+HAVE_ADRENO_SOURCE              := false
+VSYNC_EVENT_PHASE_OFFSET_NS     := 7500000
+SF_VSYNC_EVENT_PHASE_OFFSET_NS  := 5000000
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
@@ -104,17 +105,17 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 TARGET_USES_WCNSS_CTRL           := true
 
 # Filesystem
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01000000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 671088640
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 536870912
-BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
-BOARD_PERSISTIMAGE_PARTITION_SIZE := 16777216
-BOARD_TOMBSTONESIMAGE_PARTITION_SIZE := 73400320
-BOARD_FLASH_BLOCK_SIZE := 131072
+TARGET_USERIMAGES_USE_EXT4            := true
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE     := ext4
+BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE   := ext4
+BOARD_BOOTIMAGE_PARTITION_SIZE        := 0x01000000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE    := 0x01000000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE      := 671088640
+BOARD_USERDATAIMAGE_PARTITION_SIZE    := 536870912
+BOARD_CACHEIMAGE_PARTITION_SIZE       := 402653184
+BOARD_PERSISTIMAGE_PARTITION_SIZE     := 16777216
+BOARD_TOMBSTONESIMAGE_PARTITION_SIZE  := 73400320
+BOARD_FLASH_BLOCK_SIZE                := 131072
 
 # TWRP configuration
 DEVICE_RESOLUTION                       := 1080x1920
@@ -136,6 +137,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX            := true
 BOARD_SUPPRESS_SECURE_ERASE             := true
 BOARD_SUPPRESS_EMMC_WIPE                := true
 
+# Some Dual boot reacovery code not needed for now
 # USE_CHINESE_RECOVERY := false
 # ifneq ($(USE_CHINESE_RECOVERY),true)
 # BOARD_CUSTOM_RECOVERY_UI         := \
@@ -151,7 +153,7 @@ BOARD_SUPPRESS_EMMC_WIPE                := true
 TARGET_NO_RPC := true
 
 # GPS HAL lives here
-TARGET_GPS_HAL_PATH := device/xiaomi/cancro/gps
+TARGET_GPS_HAL_PATH         := device/xiaomi/cancro/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # QCRIL
@@ -175,6 +177,7 @@ EXTENDED_FONT_FOOTPRINT := true
 # Disable Block Based OTA
 BLOCK_BASED_OTA := false
 
+# Pre odex the ROM Package (disabled as it maxxed out system image size)
 # WITH_DEXPREOPT := true
 
 # Flags
