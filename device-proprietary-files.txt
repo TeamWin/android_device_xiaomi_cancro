@@ -458,7 +458,7 @@ vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsensor_test.so
 vendor/lib/libsensor_user_cal.so
-
+lib/hw/consumerir.msm8974
 bin/smonsir
 bin/smprosrv
 
@@ -474,16 +474,17 @@ vendor/lib/libTimeService.so
 app/TimeService/TimeService.apk
 
 # Listen service
-# vendor/lib/liblistenhardware.so
-# vendor/lib/liblistenjni.so
-# vendor/lib/liblisten.so
-# vendor/lib/liblistensoundmodel.so
+vendor/lib/liblistenhardware.so
+vendor/lib/liblistenjni.so
+vendor/lib/liblisten.so
+vendor/lib/liblistensoundmodel2.so
+vendor/lib/liblistensoundmodel.so
 
 # Fastcharge
 bin/hvdcp
 
 # Lights
-# lib/hw/lights.msm8974.so
+lib/hw/lights.msm8974.so
 
 # NFC
 lib/hw/nfc_nci_nfca.default.so
@@ -508,12 +509,6 @@ vendor/lib/libjpegdhw.so
 vendor/lib/liboptizoom.so
 
 bin/atmel_hover_tune.sh
-
-vendor/lib/liblistenhardware.so
-vendor/lib/liblistenjni.so
-vendor/lib/liblisten.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib/liblistensoundmodel.so
 
 # QuickBoot
 app/QuickBoot/QuickBoot.apk
