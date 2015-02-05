@@ -64,7 +64,7 @@ on boot
     chmod 0660 /dev/ttyHS2
     chown bluetooth bluetooth /dev/ttyHS2
 
-    #Create QMUX deamon socket area
+    # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
     mkdir /dev/socket/qmux_audio 0770 media audio
@@ -74,7 +74,13 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    #charger
+    # Create PERFD deamon related dirs
+    mkdir /data/misc/perfd 0770 root system
+    chmod 2770 /data/misc/perfd
+    mkdir /data/system/perfd 0770 root system
+    chmod 2770 /data/system/perfd
+
+    # charger
     chown root system /sys/module/qpnp_charger/parameters/charger_monitor
     chown root system /sys/class/power_supply/battery/input_current_max
     chown root system /sys/class/power_supply/battery/input_current_trim
@@ -423,13 +429,13 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio audio bluetooth gps qcom_diag
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/bin/logwrapper /system/bin/netmgrd
     class main
     user root
     group radio
 
 # QCOM sensor
-service sensors /system/bin/sensors.qcom
+service sensors /system/bin/logwrapper /system/bin/sensors.qcom
     class late_start
     user root
     group root
@@ -450,7 +456,7 @@ service dpmd /system/bin/dpmd
     class late_start
     socket dpmd stream 660 root system
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/bin/logwrapper /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
@@ -565,7 +571,7 @@ on property:sys.qbcharger.enable=true
 on property:sys.qbcharger.enable=false
     stop qbcharger
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /system/bin/logwrapper /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
@@ -578,13 +584,13 @@ service bugreport /system/bin/dumpstate -d -p -B \
     oneshot
     keycodes 114 115 116
 
-service mpdecision /system/bin/mpdecision --avg_comp
+service mpdecision /system/bin/logwrapper /system/bin/mpdecision --avg_comp
     class main
     user root
     group system
     disabled
 
-service thermal-engine /system/bin/thermal-engine
+service thermal-engine /system/bin/logwrapper /system/bin/thermal-engine
     class main
     user root
     group root
@@ -629,7 +635,7 @@ service adsprpcd /system/bin/adsprpcd
     user media
     group media
 
-service audiod /system/bin/audiod
+service audiod /system/bin/logwrapper /system/bin/audiod
     class late_start
     user system
     group system
@@ -689,13 +695,13 @@ service pfm /system/bin/pfm
     user system
     group system drmrpc mount
 
-service sensorext /system/bin/sensorextd
+service sensorext /system/bin/logwrapper /system/bin/sensorextd
     class late_start
     user root
     group root
     disabled
 
-service sensorservice /system/bin/sensorservice
+service sensorservice /system/bin/logwrapper /system/bin/sensorservice
     class late_start
     user root
     group root

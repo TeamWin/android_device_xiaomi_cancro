@@ -40,7 +40,7 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Kernel
 TARGET_PREBUILT_KERNEL    := device/xiaomi/cancro/kernel
-BOARD_KERNEL_CMDLINE      := ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x37 ehci-hcd.park=3  androidboot.selinux=permissive androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE      := ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3  androidboot.selinux=permissive 
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE         := 0x00000000
 BOARD_KERNEL_PAGESIZE     := 2048
