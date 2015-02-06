@@ -117,31 +117,25 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE     := 16777216
 BOARD_TOMBSTONESIMAGE_PARTITION_SIZE  := 73400320
 BOARD_FLASH_BLOCK_SIZE                := 131072
 
-# Recovery configuration
-# BUILD_TWRP_RECOVERY  										:= true
+# TWRP configuration
+DEVICE_RESOLUTION                       := 1080x1920
+BOARD_HAS_NO_REAL_SDCARD                := true
 TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
+RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
+# TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
+TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/rootdir/etc/fstab.qcom
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
+RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
 BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
-
-ifneq ($(BUILD_TWRP_RECOVERY),true)
-	DEVICE_RESOLUTION                       := 1080x1920
-	TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
-	TW_INCLUDE_L_CRYPTO                     := true
-	TW_NO_SCREEN_TIMEOUT                    := true
-	TW_NO_SCREEN_BLANK                      := true
-	TARGET_RECOVERY_QCOM_RTC_FIX            := true
-	BOARD_SUPPRESS_SECURE_ERASE             := true
-	BOARD_SUPPRESS_EMMC_WIPE                := true
-	TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
-	RECOVERY_GRAPHICS_USE_LINELENGTH        := true
-	BOARD_HAS_NO_REAL_SDCARD                := true
-	RECOVERY_FSTAB_VERSION                  := 1
-else
-	TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/rootdir/etc/fstab.qcom
-	RECOVERY_FSTAB_VERSION                  := 2
-endif
+TW_INCLUDE_L_CRYPTO                     := true
+TW_NO_SCREEN_TIMEOUT                    := true
+TW_NO_SCREEN_BLANK                      := true
+TARGET_RECOVERY_QCOM_RTC_FIX            := true
+BOARD_SUPPRESS_SECURE_ERASE             := true
+BOARD_SUPPRESS_EMMC_WIPE                := true
 
 # Some Dual boot reacovery code not needed for now
 # USE_CHINESE_RECOVERY := false
@@ -163,7 +157,7 @@ TARGET_GPS_HAL_PATH         := device/xiaomi/cancro/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # QCRIL
-# TARGET_RIL_VARIANT := caf
+#TARGET_RIL_VARIANT := caf
 
 # Use HW crypto for ODE
 TARGET_HW_DISK_ENCRYPTION := false
