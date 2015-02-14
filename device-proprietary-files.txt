@@ -1,74 +1,44 @@
 # Camera
-lib/hw/camera.msm8974.so
 bin/mm-qcamera-daemon
-lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so
-lib/libqomx_core.so
-vendor/lib/libubifocus.so
-vendor/lib/libjpegehw.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_q3a_special.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmcamera2_vpe_module.so
-vendor/lib/libmmcamera2_wnr_module.so
-vendor/lib/libmmcamera_chromaflash_lib.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_hdr_gb_lib.so
-vendor/lib/libmmcamera_hdr_lib.so
-vendor/lib/libmmcamera_hi256.so
-vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_imx132.so
-vendor/lib/libmmcamera_imx134.so
-vendor/lib/libmmcamera_imx135.so
-vendor/lib/libmmcamera_imx214.so
-vendor/lib/libmmcamera_imx215.so
-vendor/lib/libmmcamera_imx219.so
-vendor/lib/libmmcamera_imx224.so
-vendor/lib/libmmcamera_mt9m114.so
-vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
-vendor/lib/libmmcamera_optizoom_lib.so
-vendor/lib/libmmcamera_ov2720.so
-vendor/lib/libmmcamera_ov4688.so
-vendor/lib/libmmcamera_ov5648_oty5f03.so
-vendor/lib/libmmcamera_ov8825.so
-vendor/lib/libmmcamera_ov8865_q8v18a.so
-vendor/lib/libmmcamera_ov9724.so
-vendor/lib/libmmcamera_s5k3l1yx.so
-vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
-vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
-vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so
-vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so
-vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so
-vendor/lib/libmmcamera_sp1628.so
-vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
-vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
-vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
-vendor/lib/libmmcamera_tintless_algo.so
-vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_truly_cm7700_eeprom.so
-vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_ubifocus_lib.so
-vendor/lib/libmmcamera_wavelet_lib.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/liboemcamera.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc.so
-
+lib/hw/camera.msm8974.so
 lib/libchromatix_imx135_liveshot.so
 lib/libchromatix_imx214_liveshot.so
 lib/libchromatix_imx215_liveshot.so
 lib/libchromatix_imx219_liveshot.so
 lib/libchromatix_imx224_liveshot.so
+lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so
+lib/libqomx_core.so
+vendor/lib/libactuator_ad5823_camcorder.so
+vendor/lib/libactuator_ad5823_camera.so
+vendor/lib/libactuator_ad5823.so
+vendor/lib/libactuator_ak7345_camcorder.so
+vendor/lib/libactuator_ak7345_camera.so
+vendor/lib/libactuator_ak7345.so
+vendor/lib/libactuator_bu6313_camcorder.so
+vendor/lib/libactuator_bu6313_camera.so
+vendor/lib/libactuator_bu6313.so
+vendor/lib/libactuator_dw9714_camcorder.so
+vendor/lib/libactuator_dw9714_camera.so
+vendor/lib/libactuator_dw9714.so
+vendor/lib/libactuator_dw9716_camcorder.so
+vendor/lib/libactuator_dw9716_camera.so
+vendor/lib/libactuator_dw9716.so
+vendor/lib/libactuator_iu074_camcorder.so
+vendor/lib/libactuator_iu074_camera.so
+vendor/lib/libactuator_iu074.so
+vendor/lib/libactuator_lc8214_camcorder.so
+vendor/lib/libactuator_lc8214_camera.so
+vendor/lib/libactuator_lc8214.so
+vendor/lib/libactuator_ov12830_camcorder.so
+vendor/lib/libactuator_ov12830_camera.so
+vendor/lib/libactuator_ov12830.so
+vendor/lib/libactuator_ov8825_camcorder.so
+vendor/lib/libactuator_ov8825_camera.so
+vendor/lib/libactuator_ov8825.so
+vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so
+vendor/lib/libactuator_rohm_bu64243gwz_camera.so
+vendor/lib/libactuator_rohm_bu64243gwz.so
 vendor/lib/libchromaflash.so
 vendor/lib/libchromatix_imx132_common.so
 vendor/lib/libchromatix_imx132_default_video.so
@@ -204,37 +174,66 @@ vendor/lib/libchromatix_skuf_ov5648_p5v23c_common.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_default_video.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_preview.so
 vendor/lib/libchromatix_skuf_ov5648_p5v23c_snapshot.so
-
-vendor/lib/libactuator_ad5823_camcorder.so
-vendor/lib/libactuator_ad5823_camera.so
-vendor/lib/libactuator_ad5823.so
-vendor/lib/libactuator_ak7345_camcorder.so
-vendor/lib/libactuator_ak7345_camera.so
-vendor/lib/libactuator_ak7345.so
-vendor/lib/libactuator_bu6313_camcorder.so
-vendor/lib/libactuator_bu6313_camera.so
-vendor/lib/libactuator_bu6313.so
-vendor/lib/libactuator_dw9714_camcorder.so
-vendor/lib/libactuator_dw9714_camera.so
-vendor/lib/libactuator_dw9714.so
-vendor/lib/libactuator_dw9716_camcorder.so
-vendor/lib/libactuator_dw9716_camera.so
-vendor/lib/libactuator_dw9716.so
-vendor/lib/libactuator_iu074_camcorder.so
-vendor/lib/libactuator_iu074_camera.so
-vendor/lib/libactuator_iu074.so
-vendor/lib/libactuator_lc8214_camcorder.so
-vendor/lib/libactuator_lc8214_camera.so
-vendor/lib/libactuator_lc8214.so
-vendor/lib/libactuator_ov12830_camcorder.so
-vendor/lib/libactuator_ov12830_camera.so
-vendor/lib/libactuator_ov12830.so
-vendor/lib/libactuator_ov8825_camcorder.so
-vendor/lib/libactuator_ov8825_camera.so
-vendor/lib/libactuator_ov8825.so
-vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so
-vendor/lib/libactuator_rohm_bu64243gwz_camera.so
-vendor/lib/libactuator_rohm_bu64243gwz.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libjpegehw.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_special.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_vpe_module.so
+vendor/lib/libmmcamera2_wnr_module.so
+vendor/lib/libmmcamera_chromaflash_lib.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_hdr_gb_lib.so
+vendor/lib/libmmcamera_hdr_lib.so
+vendor/lib/libmmcamera_hi256.so
+vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_imx132.so
+vendor/lib/libmmcamera_imx134.so
+vendor/lib/libmmcamera_imx135.so
+vendor/lib/libmmcamera_imx214.so
+vendor/lib/libmmcamera_imx215.so
+vendor/lib/libmmcamera_imx219.so
+vendor/lib/libmmcamera_imx224.so
+vendor/lib/libmmcamera_mt9m114.so
+vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
+vendor/lib/libmmcamera_optizoom_lib.so
+vendor/lib/libmmcamera_ov2720.so
+vendor/lib/libmmcamera_ov4688.so
+vendor/lib/libmmcamera_ov5648_oty5f03.so
+vendor/lib/libmmcamera_ov8825.so
+vendor/lib/libmmcamera_ov8865_q8v18a.so
+vendor/lib/libmmcamera_ov9724.so
+vendor/lib/libmmcamera_s5k3l1yx.so
+vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
+vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
+vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so
+vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so
+vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so
+vendor/lib/libmmcamera_sp1628.so
+vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
+vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
+vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_truly_cm7700_eeprom.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_ubifocus_lib.so
+vendor/lib/libmmcamera_wavelet_lib.so
+vendor/lib/libmmipl.so
+vendor/lib/libmmjpeg.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/liboemcamera.so
+vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
+vendor/lib/libubifocus.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
@@ -295,7 +294,6 @@ etc/firmware/wcnss.b07
 etc/firmware/wcnss.b08
 etc/firmware/wcnss.b09
 etc/firmware/wcnss.mdt
-
 etc/firmware/Signedrompatch_v20.bin
 etc/firmware/Signedrompatch_v21.bin
 etc/firmware/Signedrompatch_v24.bin
@@ -361,7 +359,7 @@ etc/firmware/a330_pfp.fw
 etc/firmware/a330_pm4.fw
 
 # Media
--vendor/lib/libHevcSwDecoder.so
+vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
 vendor/lib/libmmparser.so
@@ -381,10 +379,9 @@ lib/libOmxQcelp13Enc.so
 lib/libOmxVdecHevc.so
 
 # Postprocessing
-#-app/PPPreference.apk
 bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
--vendor/lib/libmm-abl.so
+vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
 
 # Qualcomm framework
@@ -422,14 +419,14 @@ vendor/lib/libril-qcril-hook-oem.so
 # Sensors
 bin/sensors.qcom
 bin/sensorextd
+bin/smonsir
+bin/smprosrv
 vendor/lib/hw/sensors.msm8974.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsensor_test.so
 vendor/lib/libsensor_user_cal.so
-
-bin/smonsir
-bin/smprosrv
+vendor/lib/hw/consumerir.msm8974.so
 
 # Thermal
 bin/thermal-engine
@@ -437,24 +434,26 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
+app/TimeService/TimeService.apk
 bin/time_daemon
--vendor/lib/libtime_genoff.so
+vendor/lib/libtime_genoff.so
+vendor/lib/libTimeService.so
 
 # Listen service
-#vendor/lib/liblistenhardware.so
-#vendor/lib/liblistenjni.so
-#vendor/lib/liblisten.so
-#vendor/lib/liblistensoundmodel.so
+# vendor/lib/liblistenhardware.so
+# vendor/lib/liblistenjni.so
+# vendor/lib/liblisten.so
+vendor/lib/liblistensoundmodel.so
 
 # Fastcharge
 bin/hvdcp
 
+# Lights
 lib/hw/lights.msm8974.so
 
 # NFC
 vendor/firmware/bcm2079x-b5_firmware.ncd
 vendor/firmware/bcm2079x-b5_pre_firmware.ncd
-
 
 # bin/charger_monitor
 lib/libmm-omxcore.so
@@ -466,9 +465,7 @@ vendor/lib/liboptizoom.so
 
 bin/atmel_hover_tune.sh
 
-vendor/lib/liblistensoundmodel.so
-
-#fm
+# FM
 bin/fmconfig
 bin/fm_qsoc_patches
 
