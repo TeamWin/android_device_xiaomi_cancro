@@ -130,7 +130,6 @@ RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
 BOARD_NATIVE_DUALBOOT_SINGLEDATA        := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
-TW_INCLUDE_L_CRYPTO                     := true
 TW_NO_SCREEN_TIMEOUT                    := true
 TW_NO_SCREEN_BLANK                      := true
 TARGET_RECOVERY_QCOM_RTC_FIX            := true
