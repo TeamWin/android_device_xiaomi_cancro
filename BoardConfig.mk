@@ -135,6 +135,7 @@ TW_NO_SCREEN_BLANK                      := true
 TARGET_RECOVERY_QCOM_RTC_FIX            := true
 BOARD_SUPPRESS_SECURE_ERASE             := true
 BOARD_SUPPRESS_EMMC_WIPE                := true
+RECOVERY_SDCARD_ON_DATA                 := true
 
 # Some Dual boot reacovery code not needed for now
 # USE_CHINESE_RECOVERY := false
