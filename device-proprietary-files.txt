@@ -8,6 +8,9 @@ lib/libchromatix_imx219_liveshot.so
 lib/libchromatix_imx224_liveshot.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
+lib/libmm-omxcore.so
+lib/libmm-qcamera.so
+lib/libqminvapi.so
 lib/libqomx_core.so
 vendor/lib/libactuator_ad5823_camcorder.so
 vendor/lib/libactuator_ad5823_camera.so
@@ -88,6 +91,24 @@ vendor/lib/libchromatix_imx224_snapshot.so
 vendor/lib/libchromatix_imx224_video_hdr.so
 vendor/lib/libchromatix_imx224_video_hdr_uhd.so
 vendor/lib/libchromatix_imx224_video_uhd.so
+vendor/lib/libchromatix_imx225_common.so
+vendor/lib/libchromatix_imx225_default_video.so
+vendor/lib/libchromatix_imx225_hfr_120.so
+vendor/lib/libchromatix_imx225_preview.so
+vendor/lib/libchromatix_imx225_snapshot_hdr.so
+vendor/lib/libchromatix_imx225_snapshot.so
+vendor/lib/libchromatix_imx225_video_hdr.so
+vendor/lib/libchromatix_imx225_video_hdr_uhd.so
+vendor/lib/libchromatix_imx225_video_uhd.so
+vendor/lib/libchromatix_imx226_common.so
+vendor/lib/libchromatix_imx226_default_video.so
+vendor/lib/libchromatix_imx226_hfr_120.so
+vendor/lib/libchromatix_imx226_preview.so
+vendor/lib/libchromatix_imx226_snapshot_hdr.so
+vendor/lib/libchromatix_imx226_snapshot.so
+vendor/lib/libchromatix_imx226_video_hdr.so
+vendor/lib/libchromatix_imx226_video_hdr_uhd.so
+vendor/lib/libchromatix_imx226_video_uhd.so
 vendor/lib/libchromatix_ov2720_common.so
 vendor/lib/libchromatix_ov2720_default_video.so
 vendor/lib/libchromatix_ov2720_hfr.so
@@ -100,6 +121,12 @@ vendor/lib/libchromatix_ov4688_hfr.so
 vendor/lib/libchromatix_ov4688_liveshot.so
 vendor/lib/libchromatix_ov4688_preview.so
 vendor/lib/libchromatix_ov4688_zsl.so
+vendor/lib/libchromatix_ov4689_common.so
+vendor/lib/libchromatix_ov4689_default_video.so
+vendor/lib/libchromatix_ov4689_hfr.so
+vendor/lib/libchromatix_ov4689_liveshot.so
+vendor/lib/libchromatix_ov4689_preview.so
+vendor/lib/libchromatix_ov4689_zsl.so
 vendor/lib/libchromatix_ov5648_oty5f03_common.so
 vendor/lib/libchromatix_ov5648_oty5f03_default_video.so
 vendor/lib/libchromatix_ov5648_oty5f03_preview.so
@@ -202,11 +229,14 @@ vendor/lib/libmmcamera_imx214.so
 vendor/lib/libmmcamera_imx215.so
 vendor/lib/libmmcamera_imx219.so
 vendor/lib/libmmcamera_imx224.so
+vendor/lib/libmmcamera_imx225.so
+vendor/lib/libmmcamera_imx226.so
 vendor/lib/libmmcamera_mt9m114.so
 vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ov2720.so
 vendor/lib/libmmcamera_ov4688.so
+vendor/lib/libmmcamera_ov4689.so
 vendor/lib/libmmcamera_ov5648_oty5f03.so
 vendor/lib/libmmcamera_ov8825.so
 vendor/lib/libmmcamera_ov8865_q8v18a.so
@@ -227,10 +257,12 @@ vendor/lib/libmmcamera_truly_cm7700_eeprom.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera_wavelet_lib.so
+vendor/lib/libmmcamera_x5_imx214_eeprom.so
 vendor/lib/libmmipl.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/liboemcamera.so
+vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libubifocus.so
@@ -244,10 +276,6 @@ vendor/lib/libarcsoft_beauty_shot.so
 vendor/lib/libFaceDeform.so
 vendor/lib/libFaceProc.so
 vendor/lib/libt2tmanager.so
-
-# Sensors
-etc/sensor_def_qcomdev.conf
-vendor/lib/libAKM8963.so
 
 # Bluetooth
 bin/btnvtool
@@ -277,6 +305,15 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
+# Wlan
+bin/wcnss_service
+etc/firmware/wlan/prima/WCNSS_cfg.dat
+etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_x4.bin
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_x4lte.bin
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_x5.bin
+
 # Venus (media) firmware
 etc/firmware/venus.b00
 etc/firmware/venus.b01
@@ -300,31 +337,34 @@ etc/firmware/Signedrompatch_v24.bin
 
 # DRM
 bin/qseecomd
-lib/libQSEEComAPI.so:vendor/lib/libQSEEComAPI.so
+lib/libdrmdecrypt.so
 vendor/lib/drm/libdrmprplugin.so
 vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
-vendor/lib/librpmb.so
 vendor/lib/libprdrmdecrypt.so
-vendor/lib/libssd.so
+vendor/lib/libQSEEComAPI.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/librpmb.so
+vendor/lib/lib-sec-disp.so
 vendor/lib/libSecureUILib.so
 vendor/lib/libsecureui.so
 vendor/lib/libsecureuisvc_jni.so
 vendor/lib/libsecureui_svcsock.so
-vendor/lib/lib-sec-disp.so
+vendor/lib/libssd.so
 vendor/lib/libStDrvInt.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib/libtzplayready.so
 
+
 # GPS
-priv-app/com.qualcomm.location/com.qualcomm.location.apk
 bin/gsiff_daemon
 bin/quipc_igsn
 bin/quipc_main
 etc/permissions/com.qualcomm.location.xml
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
+priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
@@ -333,6 +373,7 @@ vendor/lib/liblocationservice.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libquipc_ulp_adapter.so
 vendor/lib/libulp2.so
+
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so
@@ -409,24 +450,32 @@ bin/netmgrd
 bin/qmuxd
 bin/radish
 bin/rfs_access
-bin/rmt_storage
 bin/rild
+bin/rmt_storage
+lib/libreference-ril.so
 lib/libril.so
+lib/librilutils.so
 vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
-bin/sensors.qcom
 bin/sensorextd
+bin/sensorservice
+bin/sensors.qcom
+bin/set_sensorprop.sh
 bin/smonsir
 bin/smprosrv
+bin/wait4sensorhub.sh
+etc/sensor_def_qcomdev.conf
+lib/hw/consumerir.msm8974.so
+lib/libsensorservice.so
 vendor/lib/hw/sensors.msm8974.so
+vendor/lib/libAKM8963.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsensor_test.so
 vendor/lib/libsensor_user_cal.so
-vendor/lib/hw/consumerir.msm8974.so
 
 # Thermal
 bin/thermal-engine
@@ -447,6 +496,7 @@ vendor/lib/liblistensoundmodel.so
 
 # Fastcharge
 bin/hvdcp
+bin/charger_monitor
 
 # Lights
 lib/hw/lights.msm8974.so
@@ -454,16 +504,6 @@ lib/hw/lights.msm8974.so
 # NFC
 vendor/firmware/bcm2079x-b5_firmware.ncd
 vendor/firmware/bcm2079x-b5_pre_firmware.ncd
-
-# bin/charger_monitor
-lib/libmm-omxcore.so
-lib/libmm-qcamera.so
-lib/libqminvapi.so
-
-vendor/lib/libjpegdhw.so
-vendor/lib/liboptizoom.so
-
-bin/atmel_hover_tune.sh
 
 # FM
 bin/fmconfig
@@ -474,3 +514,44 @@ lib/rfsa/adsp/libfastcvadsp.so
 lib/rfsa/adsp/libfastcvadsp_skel.so
 lib/rfsa/adsp/libscveT2T_skel.so
 lib/rfsa/adsp/libapps_mem_heap.so
+
+# Keylayout
+usr/keylayout/atmel-maxtouch.kl
+usr/keylayout/AVRCP.kl
+usr/keylayout/cyttsp_button.kl
+usr/keylayout/fts.kl
+usr/keylayout/Generic.kl
+usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl
+usr/keylayout/qwerty.kl
+usr/keylayout/synaptics_dsx.kl
+usr/keylayout/synaptics_rmi4_i2c.kl
+usr/keylayout/Vendor_0079_Product_0011.kl
+usr/keylayout/Vendor_045e_Product_028e.kl
+usr/keylayout/Vendor_046d_Product_c216.kl
+usr/keylayout/Vendor_046d_Product_c219.kl
+usr/keylayout/Vendor_046d_Product_c21d.kl
+usr/keylayout/Vendor_046d_Product_c21f.kl
+usr/keylayout/Vendor_046d_Product_c294.kl
+usr/keylayout/Vendor_046d_Product_c299.kl
+usr/keylayout/Vendor_046d_Product_c532.kl
+usr/keylayout/Vendor_054c_Product_0268.kl
+usr/keylayout/Vendor_0583_Product_2060.kl
+usr/keylayout/Vendor_05ac_Product_0239.kl
+usr/keylayout/Vendor_0b05_Product_4500.kl
+usr/keylayout/Vendor_1038_Product_1412.kl
+usr/keylayout/Vendor_12bd_Product_d015.kl
+usr/keylayout/Vendor_1689_Product_fd00.kl
+usr/keylayout/Vendor_1689_Product_fd01.kl
+usr/keylayout/Vendor_1689_Product_fe00.kl
+usr/keylayout/Vendor_18d1_Product_2c40.kl
+usr/keylayout/Vendor_1949_Product_0401.kl
+usr/keylayout/Vendor_1bad_Product_f016.kl
+usr/keylayout/Vendor_1bad_Product_f023.kl
+usr/keylayout/Vendor_1bad_Product_f027.kl
+usr/keylayout/Vendor_1bad_Product_f036.kl
+usr/keylayout/Vendor_1d79_Product_0009.kl
+usr/keylayout/Vendor_22b8_Product_093d.kl
+usr/keylayout/Vendor_2378_Product_1008.kl
+usr/keylayout/Vendor_2378_Product_100a.kl
+
+bin/atmel_hover_tune.sh
