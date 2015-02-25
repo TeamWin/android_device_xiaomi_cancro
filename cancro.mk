@@ -391,6 +391,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG       := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG  := xxhdpi
 
+# Recovery allowed devices
+TARGET_OTA_ASSERT_DEVICE := cancro
+
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
@@ -402,5 +405,5 @@ $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974
 endif
 
 # call the proprietary setup
-$(call inherit-product, vendor/xiaomi/cancro/cancro-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/cancro/cancro-vendor.mk)
 

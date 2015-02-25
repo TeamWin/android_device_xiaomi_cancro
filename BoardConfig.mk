@@ -124,8 +124,8 @@ BOARD_RECOVERY_SWIPE                    := true
 TARGET_PREBUILT_RECOVERY_KERNEL         := $(call my-dir)/kernel
 RECOVERY_GRAPHICS_USE_LINELENGTH        := true
 TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
-# TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/twrp.fstab
-TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/recovery/root/etc/twrp.fstab
+# TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/rootdir/etc/fstab.qcom
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
 RECOVERY_FSTAB_VERSION                  := 2
 BOARD_NATIVE_DUALBOOT                   := true
@@ -194,5 +194,3 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
         device/xiaomi/msm8974-common/sepolicy
-
--include vendor/xiaomi/cancro/BoardConfigVendor.mk
