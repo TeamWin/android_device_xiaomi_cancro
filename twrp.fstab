@@ -1,0 +1,9 @@
+/boot          emmc     /dev/block/platform/msm_sdcc.1/by-name/boot
+/cache         ext4     /dev/block/platform/msm_sdcc.1/by-name/cache
+/data          ext4     /dev/block/platform/msm_sdcc.1/by-name/userdata     flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/bk1
+/firmware      vfat     /dev/block/platform/msm_sdcc.1/by-name/modem        fsflags=ro
+/persist       ext4     /dev/block/platform/msm_sdcc.1/by-name/persist      flags=display="Persist";backup=1
+/recovery      emmc     /dev/block/platform/msm_sdcc.1/by-name/recovery     flags=display="Recovery";backup=1
+/system        ext4     /dev/block/platform/msm_sdcc.1/by-name/system
+
+/usb_otg       vfat     /dev/block/platform/xhci-hcd/by-num/p1              flags=display="USB-OTG";storage;wipeingui;removable
