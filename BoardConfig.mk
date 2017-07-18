@@ -48,6 +48,9 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1342177280
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13291503000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# Qualcomm support
+BOARD_USES_QCOM_HARDWARE := true
+
 # TWRP
 LZMA_RAMDISK_TARGETS                    := boot,recovery
 TW_THEME                                := portrait_hdpi
