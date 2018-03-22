@@ -34,6 +34,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_PREBUILT_KERNEL := device/xiaomi/cancro/kernel
 
 #twrp
+LZMA_RAMDISK_TARGETS                    := boot,recovery
 TARGET_USERIMAGES_USE_EXT4              := true
 TARGET_USERIMAGES_USE_F2FS              := true
 RECOVERY_VARIANT                        := twrp
