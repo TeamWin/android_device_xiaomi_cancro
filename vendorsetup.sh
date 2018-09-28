@@ -1,2 +1,2 @@
-add_lunch_combo lineage_cancro-eng
-add_lunch_combo lineage_cancro-userdebug
+add_lunch_combo omni_cancro-eng
+add_lunch_combo omni_cancro-userdebug
