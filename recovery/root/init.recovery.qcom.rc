@@ -1,5 +1,5 @@
 # separate copy needed to use /sbin/linker instead of /system/bin/linker
-service sbinqseecomd /sbin/qseecomd
+service sbinqseecomd /sbin/decrypt.sh
     oneshot
     disabled
     user root
@@ -15,8 +15,6 @@ on init
 on fs
     wait /dev/block/platform/msm_sdcc.1
     symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
-    mkdir /firmware 0771 system system
-    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower uid=1000 gid=1000 dmask=227 fmask=337
     setprop crypto.ready 1
 
 on property:crypto.ready=0 && property:ro.crypto.state=encrypted
