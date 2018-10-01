@@ -4,7 +4,7 @@
 /data         ext4    /dev/block/bootdevice/by-name/userdata               flags=encryptable=/dev/block/bootdevice/by-name/bk1;length=-16384;fsflags="nosuid,nodev,barrier=1,noauto_da_alloc,discard"
 /dbi          emmc    /dev/block/bootdevice/by-name/dbi
 /misc         emmc    /dev/block/bootdevice/by-name/misc
-/firmware     vfat    /dev/block/bootdevice/by-name/modem                  flags=backup=1;display="Firmware";fsflags="rw,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337"
+/firmware     vfat    /dev/block/bootdevice/by-name/modem                  flags=backup=1;display="Firmware";fsflags="ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337"
 /recovery     emmc    /dev/block/bootdevice/by-name/recovery
 /rpm          emmc    /dev/block/bootdevice/by-name/rpm
 /sbl1         emmc    /dev/block/bootdevice/by-name/sbl1
